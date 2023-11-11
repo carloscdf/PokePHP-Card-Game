@@ -1,0 +1,338 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+}
+
+body {
+    position: relative;
+    font-family: 'VT323', monospace !important;
+    opacity: 0;
+    animation: fade-in 0.5s ease-in-out forwards; 
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.header > .logo {
+    width: 250px;
+    margin-right: 10px;
+}
+.header > .icon {
+    width: 60px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header2 > .logo2 {
+    width: 130px;
+    margin-right: 10px;
+}
+.header2 > .icon {
+    width: 40px;
+}
+
+.header2 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 20px;
+}
+.header1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+header {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.lugia {
+    width: 200px;
+}
+
+.animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    background-color: white;
+    padding: 30px;
+    border: 6px double #7c7fdb;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.box > form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+} 
+
+.box > form > input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #7c7fdb;
+    font-family: 'VT323', monospace !important;
+    font-size: 22px;
+    background-color: #e4e6ec;
+}
+
+.box > form > input:focus{
+    outline: #7c7fdb;
+}
+
+.info {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#icon {
+    height: 34px;
+    width: 34px;
+    border: 2px solid #7c7fdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.box > form > button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #7c7fdb;
+    border: 6px double #ffffff;
+    color: white;
+    font-family: 'VT323', monospace !important;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.box > form > button:focus{
+    outline: #58585800;
+}
+
+/*Tela da gameplay*/
+
+.cartas {
+    display: flex;
+}
+
+.carta > .pokemon {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+    border: 5px double #7c7fdb;
+    z-index: 2;
+    background-color: #bdc1da;
+}
+
+.carta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 155px;
+    margin: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #e4e6ec;
+    text-align: center;
+    border: 5px double #7c7fdb;
+    font-size: 16px;
+    animation: shake 1.2s forwards;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0); 
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-3px); 
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(3px); 
+    }
+}
+
+
+
+.nome {
+    margin-bottom: 10px;
+}
+
+.effect {
+    width: 90px;
+    position: absolute;
+}
+
+.carta > span {
+    z-index: 2;
+}
+
+.carta > span.nivel {
+    font-size: 18px;
+}
+
+.carta > span.nivel::after {
+    content: "+";
+}
+
+.vs{
+    font-size: 28px;
+    padding: 20px;
+    margin: 20px !important;
+    color: #ffffff;
+    animation: grandao 1s forwards;
+    position: absolute;
+    z-index: 4;
+}
+
+.vs-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes grandao {
+    0% {
+        font-size: 1080px;
+
+    }
+    100% {
+        font-size: 28px;
+    }
+}
+
+.title {
+    font-size: 24px;
+    padding: 20px;
+    color: #ffffff;
+}
+
+
+.pontuacao{
+    background-color: #e4e6ec;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    height: 290px;
+    width: 153px;
+    padding: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    justify-content: center;
+    border-top: 5px double #7c7fdb;
+    border-left: 5px double #7c7fdb;
+    border-right: 5px double #7c7fdb;
+    border-bottom: 0px;
+    text-align: center;
+    animation: debaixo 1.5s forwards;
+}
+
+@keyframes debaixo {
+    0% {
+        bottom: -1000px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+
+.tit {
+    margin-bottom: 7px;
+    background-color: #d8d8d8;
+    padding: 25px 10px 25px 10px;
+    text-transform: uppercase;
+    border: 2px solid #7c7fdb;
+}
+
+.hr {
+    height: 2px;
+    background-color: black;
+    margin: 10px;
+}
+
+.button {
+    padding: 12px;
+    width: 126px;
+    background-color: #7c7fdb;
+    border: 6px double #E4E6EC;
+    color: rgb(255, 255, 255);
+    font-family: 'VT323', monospace !important;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button2 {
+    margin-top: 0px;
+    padding: 12px;
+    width: 126px;
+    background-color: #7c7fdb;
+    border: 6px double #E4E6EC;
+    color: rgb(255, 255, 255);
+    font-family: 'VT323', monospace !important;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
